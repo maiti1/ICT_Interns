@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tan_background"
+    tools:context="com.example.admin.ict_interns.MainActivity">
+
+
+
+
+   <TextView
+       android:id="@+id/add_details"
+       style="@style/CategoryStyle"
+       android:background="@color/category_add"
+       android:text="@string/category_add" />
+
+
+   <TextView
+       android:id="@+id/add_project"
+       style="@style/CategoryStyle"
+       android:background="@color/category_projects"
+       android:text="@string/category_projects" />
+
+   <TextView
+       android:id="@+id/leave"
+       style="@style/CategoryStyle"
+       android:background="@color/category_leave"
+       android:text="@string/category_leave"
+       android:layout_marginBottom="100dp"/>
+
+
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/logout"
+       android:text="exit"
+       android:textColor="#ffffff" />
+
+
+</LinearLayout>

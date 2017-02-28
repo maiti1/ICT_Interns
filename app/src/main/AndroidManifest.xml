@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.admin.ict_interns">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_application_id" />
+
+        <uses-permission android:name="android.permission.INTERNET" />
+
+        <activity android:name=".Personal_Details"
+            android:label="@string/category_add"
+            android:parentActivityName=".MainActivity"/>
+        <!-- Parent activity meta-data to support 4.0 and lower -->
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+            />
+        <activity android:name=".AddProject"
+            android:label="@string/category_projects"
+            android:parentActivityName=".MainActivity"/>
+            />
+        <activity android:name=".LeaveActivity"
+            android:label="@string/category_leave"
+            android:parentActivityName=".MainActivity"
+            >
+
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ICT_Interns</string>
+    <string name="facebook_application_id" translatable="false"> 404021553265485</string>
+
+    <string name="title">ICT Interns</string>
+
+    <string name="category_add">Add Details</string>
+    <string name="category_projects">Add Projects</string>
+    <string name="category_leave">Take Leave</string>
+
+
+</resources>

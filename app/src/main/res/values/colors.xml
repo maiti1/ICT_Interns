@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary color of the app (shown in the app bar) -->
+    <color name="primary_color">#273952</color>
+
+    <!-- Primary dark color of the app (shown in the status bar) -->
+    <color name="primary_dark_color">#4c6983</color>
+
+    <!-- Background color for app -->
+    <color name="tan_background">#eff0f4</color>
+
+    <!-- Background color for the numbers category -->
+    <color name="category_add">#4c6983</color>
+
+    <!-- Background color for the family members category -->
+    <color name="category_projects">#38556a</color>
+
+    <color name="category_leave">#34495e</color>
+
+    <color name="background">#96deda</color>
+
+</resources>

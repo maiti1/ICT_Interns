@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "383643238958",
+    "firebase_url": "https://ictproject-4c4c7.firebaseio.com",
+    "project_id": "ictproject-4c4c7",
+    "storage_bucket": "ictproject-4c4c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383643238958:android:9db0377bd34716fa",
+        "android_client_info": {
+          "package_name": "com.example.admin.ict_interns"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383643238958-d8e5nhbv3u2hv96o9983mdgpkn2515us.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4ab5APaHmFZQ332Z6BdnYtyg9nlbaC7k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
