@@ -8,5 +8,8 @@
     <string name="category_projects">Add Projects</string>
     <string name="category_leave">Take Leave</string>
 
+    <string name="open">open</string>
+    <string name="close">close</string>
+
 
 </resources>

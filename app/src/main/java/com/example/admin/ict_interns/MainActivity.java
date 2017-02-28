@@ -2,9 +2,12 @@ package com.example.admin.ict_interns;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.firebase.ui.auth.AuthUI;
@@ -16,6 +19,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private FirebaseAuth mAuth;
     private final int RC_SIGN_IN = 0;
+
+    private DrawerLayout mLayout;
+    private ActionBarDrawerToggle mToggle;
 
 
     @Override
@@ -47,8 +53,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.add_project).setOnClickListener(this);
         findViewById(R.id.leave).setOnClickListener(this);
 
+        mLayout = (DrawerLayout)findViewById(R.id.drawerLayout);
+        mToggle = new ActionBarDrawerToggle(this,mLayout,R.string.open,R.string.close);
+
+        mLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
+
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(mToggle.onOptionsItemSelected(item)) {
+           return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
