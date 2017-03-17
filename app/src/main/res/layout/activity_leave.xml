@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,148 +11,109 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/tan_background"
-    tools:context="com.example.admin.ict_interns.LeaveActivity"
-    android:weightSum="1">
+    tools:context="com.example.admin.ict_interns.LeaveActivity">
 
-    <TextView
+    <EditText
+        android:background="@drawable/button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Take Your Leave.."
-        android:textSize="24sp"
-        android:textStyle="italic"
-        android:layout_marginLeft="60dp"/>
+        android:hint="Name of Employee"
+        android:paddingLeft="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/employee_name" />
 
-    <LinearLayout
+    <EditText
+        android:background="@drawable/button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:hint="Designation"
+        android:paddingLeft="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/designation"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:background="@drawable/button"
+        android:layout_width="match_parent"
+        android:hint="Name of School"
+        android:paddingLeft="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/name_of_school"
+        android:layout_marginTop="15dp"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name of employee: "
-            android:textSize="20sp"/>
-
-        <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="name"
-            android:layout_marginLeft="10dp"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Designation: "
-            android:textSize="20sp"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="designation"
-            android:layout_marginLeft="10dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Name of school: "
-            android:textSize="20sp"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="school name"
-            android:layout_marginLeft="10dp"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Leave required from: "
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:background="@drawable/button"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textStyle="italic"
+            android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="date"
-            android:id="@+id/from_date"
-            android:focusable="false"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" To: "
-            android:textSize="20sp"/>
+            android:background="@drawable/button"
+            android:layout_width="100dp"
+            android:hint="Start Date"
+            android:layout_height="30dp"
+            android:id="@+id/start_date"
+            android:paddingLeft="8dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="20dp"/>
 
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="date"
-            android:id="@+id/to_date"
-            android:focusable="false"/>
+            android:background="@drawable/button"
+            android:layout_width="100dp"
+            android:hint="End Date"
+            android:layout_height="30dp"
+            android:id="@+id/end_date"
+            android:paddingLeft="8dp"
+            android:layout_marginTop="15dp" />
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Purpose of leave: "
-        android:textSize="20sp"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
-        android:background="@drawable/background"
-        android:id="@+id/project_description"
-        android:layout_weight="0.5"
-        android:layout_marginBottom="12dp"/>
+        android:paddingLeft="30dp"
+        android:background="@drawable/button"
+        android:hint="Purpose of Leave"
+        android:id="@+id/purpose_of_leave"
+        android:layout_weight="0.3"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"/>
 
-
-    <LinearLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Address during leave: "
-            android:textSize="20sp"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="address of leave"
-            android:layout_marginLeft="10dp"/>
-
-    </LinearLayout>
+        android:inputType="textMultiLine"
+        android:paddingLeft="30dp"
+        android:background="@drawable/button"
+        android:hint="Address of Leave"
+        android:id="@+id/address"
+        android:layout_weight="0.3"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="10dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="submit"/>
+        android:text="submit"
+        android:id="@+id/submit_leave"/>
 
+    <Button
+        android:id="@+id/return_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background" />
 
 
 </LinearLayout>

@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/message"
-        android:title="Messages"/>
 
-    <item android:id="@+id/about"
-        android:title="About"/>
+    <item android:title="Home"
+        android:id="@id/home"
+        android:icon="@mipmap/ic_home_black_24dp">
+    </item>
+
+    <item android:id="@+id/message"
+        android:title="Messages"
+        android:icon="@mipmap/ic_message_black_24dp"/>
 
     <item android:id="@+id/exit"
-        android:title="Exit"/>
+        android:title="Exit"
+        android:icon="@mipmap/ic_exit_to_app_black_24dp"/>
 
 </menu>

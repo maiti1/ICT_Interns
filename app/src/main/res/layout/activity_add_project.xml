@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_add_project"
@@ -9,48 +13,101 @@
     tools:context="com.example.admin.ict_interns.AddProject"
     android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Project Description: "/>
-
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
-        android:background="@drawable/background"
+        android:background="@drawable/button"
         android:id="@+id/project_description"
-        android:layout_weight="0.30"
-        android:layout_marginBottom="12dp"/>
+        android:hint="Project Description"
+        android:paddingLeft="30dp"
+        android:layout_weight="0.3" />
+
+    <TimePicker
+        android:id="@+id/simpleTimePicker"
+        android:layout_width="300dp"
+        android:layout_height="95dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#ecf0f1"
+        android:timePickerMode="spinner" />
 
     <TextView
+        android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time In: "
-        android:layout_marginBottom="12dp"/>
+        android:layout_centerHorizontal="true"
+        android:text="Time In ::"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TimePicker
+        android:id="@+id/simpleTimePicker1"
+        android:layout_width="300dp"
+        android:layout_height="95dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#ecf0f1"
+        android:timePickerMode="spinner" />
 
     <TextView
+        android:id="@+id/time_out"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time Out: "
-        android:layout_marginBottom="12dp"/>
+        android:layout_centerHorizontal="true"
+        android:text="Time Out ::"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <DatePicker
+        android:id="@+id/dp_date"
+        android:layout_width="300dp"
+        android:layout_height="95dp"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false" />
 
     <TextView
+        android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Date : "
-        android:layout_marginBottom="12dp"/>
+        android:layout_centerHorizontal="true"
+        android:text="Date ::"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/total_hours_worked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Hours : "
-        android:layout_marginBottom="12dp"/>
+        android:layout_centerHorizontal="true"
+        android:text="Total Hours Worked ::"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
 
-   <Button
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="submit"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="submit"
+        android:id="@+id/submit"/>
+
+
+    <Button
+        android:id="@+id/return_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mentor"/>
+
+
+
 
 
 </LinearLayout>
+</ScrollView>

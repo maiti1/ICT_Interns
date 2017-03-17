@@ -1,5 +1,6 @@
 package com.example.admin.ict_interns;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -68,6 +69,8 @@ public class Personal_Details extends AppCompatActivity implements View.OnClickL
         if(v.getId() == R.id.save)
         {
             saveUserInformation();
+            Intent intent = new Intent(Personal_Details.this,AddProject.class);
+            startActivity(intent);
 
         }
     }

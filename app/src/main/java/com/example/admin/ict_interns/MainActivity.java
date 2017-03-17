@@ -2,10 +2,13 @@ package com.example.admin.ict_interns;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -20,8 +23,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth mAuth;
     private final int RC_SIGN_IN = 0;
 
-    private DrawerLayout mLayout;
+    private DrawerLayout mDrawer;
     private ActionBarDrawerToggle mToggle;
+
+    private NavigationView navigationView;
+    private FragmentTransaction fragmentTransaction;
+    private Toolbar toolbar;
+
+
+
 
 
     @Override
@@ -41,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivityForResult(AuthUI.getInstance()
                     .createSignInIntentBuilder()
                     .setIsSmartLockEnabled(false)
-                    .setLogo(R.mipmap.images)
+                    .setTheme(R.style.Background)
                     .setProviders(AuthUI.EMAIL_PROVIDER,
                             AuthUI.FACEBOOK_PROVIDER,
                             AuthUI.GOOGLE_PROVIDER)
@@ -53,13 +63,53 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.add_project).setOnClickListener(this);
         findViewById(R.id.leave).setOnClickListener(this);
 
-        mLayout = (DrawerLayout)findViewById(R.id.drawerLayout);
-        mToggle = new ActionBarDrawerToggle(this,mLayout,R.string.open,R.string.close);
+        mDrawer = (DrawerLayout)findViewById(R.id.drawer_layout);
+        navigationView = (NavigationView)findViewById(R.id.navigation_view);
 
-        mLayout.addDrawerListener(mToggle);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        mToggle = new ActionBarDrawerToggle(this,mDrawer,R.string.open,R.string.close);
+        mDrawer.addDrawerListener(mToggle);
         mToggle.syncState();
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()){
+
+                    case R.id.home:
+                        Intent intent = new Intent(MainActivity.this,MainActivity.class);
+                        startActivity(intent);
+                        item.setChecked(true);
+                        mDrawer.closeDrawers();
+                        break;
+
+                    case R.id.message:
+                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.add(R.id.main_container,new Message_fragment());
+                        fragmentTransaction.commit();
+                        getSupportActionBar().setTitle("Message Fragment");
+                        item.setChecked(true);
+                        mDrawer.closeDrawers();
+                        break;
+
+                    case R.id.exit:
+                        finish();
+                        item.setChecked(true);
+                        mDrawer.closeDrawers();
+                        break;
+
+                }
+                return true;
+            }
+        });
+
 
 
 
@@ -67,10 +117,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if(mToggle.onOptionsItemSelected(item)) {
-           return true;
+    public boolean  onOptionsItemSelected(MenuItem item) {
+        if(mToggle.onOptionsItemSelected(item))
+        {
+            return true;
         }
+
+
         return super.onOptionsItemSelected(item);
     }
 

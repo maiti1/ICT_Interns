@@ -19,4 +19,9 @@
 
     <color name="background">#96deda</color>
 
+    <color name="editcolor1">#647687</color>
+
+    <color name="editcolor2">#ffffff</color>
+
+
 </resources>

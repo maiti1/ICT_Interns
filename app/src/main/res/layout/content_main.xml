@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp">
+
+        <Button
+            android:id="@+id/add_details"
+            style="@style/CategoryStyle"
+            android:background="@color/category_add"
+            android:text="@string/category_add"
+            android:drawableLeft="@mipmap/ic_person_add_black_24dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"/>
+        <Button
+            android:id="@+id/add_project"
+            style="@style/CategoryStyle"
+            android:background="@color/category_projects"
+            android:text="@string/category_projects"
+            android:drawableLeft="@mipmap/ic_assignment_black_24dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"/>
+
+        <Button
+            android:id="@+id/leave"
+            style="@style/CategoryStyle"
+            android:background="@color/category_leave"
+            android:text="@string/category_leave"
+            android:drawableLeft="@mipmap/ic_weekend_black_24dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/logout"
+            android:text="exit"/>
+
+
+    </LinearLayout>

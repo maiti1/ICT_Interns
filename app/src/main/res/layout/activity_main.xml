@@ -2,60 +2,44 @@
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/drawerLayout"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/tan_background"
     tools:context="com.example.admin.ict_interns.MainActivity">
 
 
 
-   <LinearLayout
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <android.support.design.widget.AppBarLayout
        android:layout_width="match_parent"
-       android:layout_height="match_parent">
+       android:layout_height="wrap_content">
 
-      <TextView
-          android:id="@+id/add_details"
-          style="@style/CategoryStyle"
-          android:background="@color/category_add"
-          android:text="@string/category_add" />
-
-
-      <TextView
-          android:id="@+id/add_project"
-          style="@style/CategoryStyle"
-          android:background="@color/category_projects"
-          android:text="@string/category_projects" />
-
-      <TextView
-          android:id="@+id/leave"
-          style="@style/CategoryStyle"
-          android:background="@color/category_leave"
-          android:text="@string/category_leave"
-          android:layout_marginBottom="100dp"/>
-
-
-      <Button
+      <android.support.v7.widget.Toolbar
+          android:id="@+id/toolbar"
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:id="@+id/logout"
-          android:text="exit"
-          android:textColor="#ffffff" />
+          android:layout_height="?attr/actionBarSize"
+          android:background="?attr/colorPrimary" />
 
-   </LinearLayout>
-   
+
+
+   </android.support.design.widget.AppBarLayout>
+
+   <include layout="@layout/content_main" />
+</android.support.design.widget.CoordinatorLayout>
+
    <android.support.design.widget.NavigationView
        android:layout_width="wrap_content"
        android:layout_height="match_parent"
        app:menu="@menu/navigation_menu"
-       android:layout_gravity="start">
+       android:layout_gravity="start"
+       android:id="@+id/navigation_view"
+       app:headerLayout="@layout/home">
 
    </android.support.design.widget.NavigationView>
-
-
-
-
-
 
 </android.support.v4.widget.DrawerLayout>

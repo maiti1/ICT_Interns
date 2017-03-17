@@ -11,6 +11,35 @@ public class UserInformation {
     public String contact;
     public String nameofschool;
     public String district;
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public String getIdno() {
+        return idno;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public String getNameofschool() {
+        return nameofschool;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public String getMentordetails() {
+        return mentordetails;
+    }
+
+    public String getmContact() {
+        return mContact;
+    }
+
     public String mentordetails;
     public String mContact;
 
@@ -28,4 +57,5 @@ public class UserInformation {
         this.mentordetails = mentordetails;
         this.mContact = mContact;
     }
+
 }

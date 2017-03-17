@@ -6,53 +6,68 @@
     android:layout_height="match_parent"
     android:background="@color/tan_background"
     android:orientation="vertical"
+
     tools:context="com.example.admin.ict_interns.Personal_Details">
 
     <EditText
+        android:background="@drawable/button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Full Name"
+        android:hint="Full name"
+        android:paddingLeft="30dp"
+        android:layout_height="40dp"
         android:id="@+id/full_name"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="15dp"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:hint="Identity number"
         android:id="@+id/id_no"
+        android:background="@drawable/button"
+        android:paddingLeft="30dp"
+        android:layout_height="40dp"
         android:layout_marginTop="10dp"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:paddingLeft="30dp"
+        android:layout_height="40dp"
         android:hint="Contact number"
         android:id="@+id/contact"
         android:layout_marginTop="10dp"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:paddingLeft="30dp"
+        android:layout_height="40dp"
         android:hint="Name of School"
         android:id="@+id/name_of_school"
         android:layout_marginTop="10dp"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:paddingLeft="30dp"
+        android:layout_height="40dp"
         android:hint="District"
         android:id="@+id/district"
         android:layout_marginTop="10dp"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:paddingLeft="30dp"
+        android:layout_height="40dp"
         android:hint="Mentor Details"
         android:id="@+id/mentor_details"
         android:layout_marginTop="10dp"/>
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:paddingLeft="30dp"
+        android:layout_height="40dp"
         android:hint="Contact Mentor"
         android:id="@+id/contact_m"
         android:layout_marginTop="10dp"/>
