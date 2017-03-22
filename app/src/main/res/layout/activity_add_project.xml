@@ -9,7 +9,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/tan_background"
+    android:background="@mipmap/picture2"
     tools:context="com.example.admin.ict_interns.AddProject"
     android:weightSum="1">
 
@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
-        android:background="@drawable/button"
+        android:background="@drawable/add_project"
         android:id="@+id/project_description"
         android:hint="Project Description"
         android:paddingLeft="30dp"
@@ -29,7 +29,7 @@
         android:layout_height="95dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:background="#ecf0f1"
+        android:background="@drawable/add_project"
         android:timePickerMode="spinner" />
 
     <TextView
@@ -47,7 +47,7 @@
         android:layout_height="95dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:background="#ecf0f1"
+        android:background="@drawable/add_project"
         android:timePickerMode="spinner" />
 
     <TextView
@@ -75,20 +75,23 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
+    <EditText
         android:id="@+id/total_hours_worked"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="Total Hours Worked ::"
+        android:background="@drawable/add_project"
+        android:hint="Total Hours Worked:"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#000"/>
+        android:paddingLeft="30dp"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="submit"
+        android:background="#f6e4b5"
+        android:layout_margin="20dp"
         android:id="@+id/submit"/>
 
 

@@ -4,7 +4,7 @@
     android:id="@+id/activity_personal__details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tan_background"
+    android:background="@mipmap/picture4"
     android:orientation="vertical"
 
     tools:context="com.example.admin.ict_interns.Personal_Details">
@@ -76,6 +76,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/save"
-        android:text="save"/>
+        android:text="save"
+        android:background="#7FDBFF"
+        android:layout_margin="20dp"/>
 
 </LinearLayout>

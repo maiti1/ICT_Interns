@@ -71,6 +71,7 @@ public class Personal_Details extends AppCompatActivity implements View.OnClickL
             saveUserInformation();
             Intent intent = new Intent(Personal_Details.this,AddProject.class);
             startActivity(intent);
+            finish();
 
         }
     }

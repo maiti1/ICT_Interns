@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="@android:color/holo_green_dark"> // Put your color for ripple effect
+    android:color="@android:color/holo_green_dark">
     <item android:id="@android:id/mask">
         <shape android:shape="oval" >
-            <solid android:color="@android:color/black" /> //Color not displayed,just to tell ripple about the bounds
+            <solid android:color="@android:color/black" />
         </shape>
     </item>
-    <item android:drawable="@drawable/ic_keyboard_return_black_24dp" /> //And
+    <item android:drawable="@drawable/ic_keyboard_return_black_24dp" />
     your drawable
 </ripple>

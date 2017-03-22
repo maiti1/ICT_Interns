@@ -23,16 +23,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private FirebaseAuth mAuth;
     private final int RC_SIGN_IN = 0;
 
-    private DrawerLayout mDrawer;
-    private ActionBarDrawerToggle mToggle;
-
-    private NavigationView navigationView;
-    private FragmentTransaction fragmentTransaction;
-    private Toolbar toolbar;
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,69 +53,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.add_project).setOnClickListener(this);
         findViewById(R.id.leave).setOnClickListener(this);
 
-        mDrawer = (DrawerLayout)findViewById(R.id.drawer_layout);
-        navigationView = (NavigationView)findViewById(R.id.navigation_view);
-
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        mToggle = new ActionBarDrawerToggle(this,mDrawer,R.string.open,R.string.close);
-        mDrawer.addDrawerListener(mToggle);
-        mToggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-
-
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
-                switch (item.getItemId()){
-
-                    case R.id.home:
-                        Intent intent = new Intent(MainActivity.this,MainActivity.class);
-                        startActivity(intent);
-                        item.setChecked(true);
-                        mDrawer.closeDrawers();
-                        break;
-
-                    case R.id.message:
-                        fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        fragmentTransaction.add(R.id.main_container,new Message_fragment());
-                        fragmentTransaction.commit();
-                        getSupportActionBar().setTitle("Message Fragment");
-                        item.setChecked(true);
-                        mDrawer.closeDrawers();
-                        break;
-
-                    case R.id.exit:
-                        finish();
-                        item.setChecked(true);
-                        mDrawer.closeDrawers();
-                        break;
-
-                }
-                return true;
-            }
-        });
-
-
-
-
-
     }
 
-    @Override
-    public boolean  onOptionsItemSelected(MenuItem item) {
-        if(mToggle.onOptionsItemSelected(item))
-        {
-            return true;
-        }
 
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -159,9 +89,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         public void onComplete(@NonNull Task<Void> task) {
 
                            Log.d("AUTH","USER LOGGED OUT");
-                            finish();
+
                         }
                     });
+            finish();
         }
 
         if(view.getId() == R.id.add_details)

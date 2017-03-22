@@ -21,6 +21,6 @@
     <style name="Background">
         <item name="android:windowActionBar">false</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@drawable/uibackground</item>
+        <item name="android:windowBackground">@drawable/uibackground</item>>
     </style>
 </resources>

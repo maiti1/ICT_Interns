@@ -89,6 +89,7 @@ public class LeaveActivity extends AppCompatActivity implements View.OnClickList
         {
             Intent intent1 = new Intent(LeaveActivity.this,MainActivity.class);
             startActivity(intent1);
+            finish();
         }
 
 

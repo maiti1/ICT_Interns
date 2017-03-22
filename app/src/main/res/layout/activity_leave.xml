@@ -10,11 +10,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/tan_background"
+    android:background="@mipmap/picture3"
     tools:context="com.example.admin.ict_interns.LeaveActivity">
 
     <EditText
-        android:background="@drawable/button"
+        android:background="@drawable/leave"
         android:layout_width="match_parent"
         android:hint="Name of Employee"
         android:paddingLeft="30dp"
@@ -22,7 +22,7 @@
         android:id="@+id/employee_name" />
 
     <EditText
-        android:background="@drawable/button"
+        android:background="@drawable/leave"
         android:layout_width="match_parent"
         android:hint="Designation"
         android:paddingLeft="30dp"
@@ -31,7 +31,7 @@
         android:layout_marginTop="15dp"/>
 
     <EditText
-        android:background="@drawable/button"
+        android:background="@drawable/leave"
         android:layout_width="match_parent"
         android:hint="Name of School"
         android:paddingLeft="30dp"
@@ -44,7 +44,6 @@
             android:layout_height="wrap_content"
             android:text="Leave required from: "
             android:textSize="20sp"
-            android:background="@drawable/button"
             android:textAlignment="center"
             android:textAllCaps="true"
             android:textStyle="italic"
@@ -56,7 +55,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:background="@drawable/button"
+            android:background="@drawable/leave"
             android:layout_width="100dp"
             android:hint="Start Date"
             android:layout_height="30dp"
@@ -67,7 +66,7 @@
             android:layout_marginRight="20dp"/>
 
         <EditText
-            android:background="@drawable/button"
+            android:background="@drawable/leave"
             android:layout_width="100dp"
             android:hint="End Date"
             android:layout_height="30dp"
@@ -82,7 +81,7 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:paddingLeft="30dp"
-        android:background="@drawable/button"
+        android:background="@drawable/leave"
         android:hint="Purpose of Leave"
         android:id="@+id/purpose_of_leave"
         android:layout_weight="0.3"
@@ -94,7 +93,7 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:paddingLeft="30dp"
-        android:background="@drawable/button"
+        android:background="@drawable/leave"
         android:hint="Address of Leave"
         android:id="@+id/address"
         android:layout_weight="0.3"
@@ -105,7 +104,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="submit"
-        android:id="@+id/submit_leave"/>
+        android:background="#bd4682"
+        android:id="@+id/submit_leave"
+        android:layout_margin="20dp"/>
 
     <Button
         android:id="@+id/return_back"

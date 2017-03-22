@@ -39,7 +39,7 @@ public class AddProject extends AppCompatActivity implements View.OnClickListene
     private TextView start_time;
     private TextView end_time;
     private TextView date;
-    private TextView totalHours;
+    private EditText totalHours;
     private Button submit;
     private TextView mentor_details;
     private Button return_home;
@@ -56,7 +56,7 @@ public class AddProject extends AppCompatActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_project);
 
-        totalHours = (TextView)findViewById(R.id.total_hours_worked);
+        totalHours = (EditText) findViewById(R.id.total_hours_worked);
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
         mAuth = FirebaseAuth.getInstance();
 
@@ -126,6 +126,8 @@ public class AddProject extends AppCompatActivity implements View.OnClickListene
 
 
 
+
+
     }
 
     private String addProject(String mentor,String ProjectDescription, String time_in,String time_out, String date,String totalHours)
@@ -167,6 +169,7 @@ public class AddProject extends AppCompatActivity implements View.OnClickListene
         {
             Intent intent1 = new Intent(AddProject.this,MainActivity.class);
             startActivity(intent1);
+            finish();
         }
 
 
